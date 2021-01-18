@@ -1,0 +1,142 @@
+Normalization
+so given a conceptual design, there is a correct way to structure relational data
+to avoid data redundancy
+and ensure data integrity
+
+
+-- Count the amount of film_id's in film table
+SELECT COUNT(film_id) FROM film;
+
+-- Create an alias
+SELECT COUNT(film_id) AS "Total films"
+FROM film;
+
+
+********************************************************
+AGGREGATES
+********************************************************
+-- Group by rating and aggregate the film_id count
+SELECT rating, COUNT(film_id) AS "Total films"
+FROM film
+GROUP BY rating;
+
+-- Group by the rental duration, average the rental rate and give alias
+SELECT rental_duration, AVG(rental_rate) AS "Average rental rate"
+FROM film
+GROUP BY rental_duration;
+
+-- Find the rows with the maximum rental rate
+SELECT rental_duration, MAX(rental_rate) AS "Max rental rate"
+FROM film
+GROUP BY rental_duration;
+
+
+********************************************************
+ORDER BY
+********************************************************
+-- Select average length of films and order by the average length
+SELECT film_id, AVG(length)  AS "avg length" FROM film
+GROUP BY film_id
+ORDER BY "avg length";
+
+-- Round the results to use only two decimal places
+SELECT film_id, ROUND(AVG(length), 2)  AS "avg length" FROM film
+GROUP BY film_id
+ORDER BY "avg length";
+
+-- Order by descending values
+SELECT film_id, ROUND(AVG(length), 2)  AS "avg length" FROM film
+GROUP BY film_id
+ORDER BY "avg length" DESC;
+
+-- Limit results to 5
+SELECT film_id, ROUND(AVG(length), 2)  AS "avg length" FROM film
+GROUP BY film_id
+ORDER BY "avg length" DESC
+LIMIT 5;
+
+
+
+********************************************************
+SUBQUERIES
+********************************************************
+
+-- First select title and id for movie EARLY HOME
+SELECT title, film_id
+FROM film
+WHERE title = 'EARLY HOME';
+
+-- Using the film_id located in the previous query find it in the inventory table
+SELECT *
+FROM inventory
+WHERE film_id = 268;
+
+-- Use Join to find the inventory, film and store id
+SELECT i.inventory_id, i.film_id, i.store_id
+FROM inventory i
+JOIN film f
+ON (i.film_id = f.film_id)
+WHERE f.title = 'EARLY HOME';
+
+-- Use Subquery to get the film_id from the query finding EARLY HOME
+SELECT *
+FROM inventory
+WHERE film_id IN
+(
+  SELECT film_id
+  FROM film
+  WHERE title = 'EARLY HOME'
+);
+
+-- Check to make sure the subquery returned correct value
+SELECT *
+FROM inventory
+WHERE film_id IN (268);
+
+-- Find how many people rented AGENT TRUMAN
+SELECT COUNT(*)
+FROM customer
+WHERE customer_id IN
+  (
+    SELECT customer_id
+    FROM payment
+    WHERE rental_id IN
+    (
+      SELECT rental_id
+      FROM rental
+      WHERE inventory_id IN
+      (
+        SELECT inventory_id
+        FROM inventory
+        WHERE film_id IN
+        (
+          SELECT film_id
+          FROM film
+          WHERE title = 'AGENT TRUMAN'
+        )
+      )
+    )
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
