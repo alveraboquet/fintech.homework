@@ -1,3 +1,7 @@
+-- *****************************************************************
+-- Part 1
+-- *****************************************************************
+
 -- Initial query to identify card holders and number of cards - 53 records
 SELECT *
 FROM card_holder
@@ -175,11 +179,36 @@ SELECT * FROM top_100_between_7_and_9
 -- Query table view: top_5_merchants
 SELECT * FROM top_5_merchants
 
+-- *****************************************************************
+-- Part 2
+-- *****************************************************************
 
+-- Query card_holders 2 and 18
+SELECT card_holder.card_holder_id, t.date, EXTRACT(HOUR FROM date) AS "hour", t.amount
+FROM card_holder
+INNER JOIN credit_card ON card_holder.card_holder_id = credit_card.card_holder_id
+INNER JOIN transaction as t ON credit_card.card = t.card
+WHERE (card_holder.card_holder_id = 18 OR card_holder.card_holder_id = 2)
+ORDER BY t.date
 
-
-
-
+-- Query card_holder 25 from jan to jun 2018
+-- 124 records total (excluding date filter)
+-- 68 records with date filter
+SELECT  
+	t.date, 
+	EXTRACT(MONTH FROM date) AS "month", 
+	EXTRACT(DAY FROM date) AS "day", 
+	EXTRACT(YEAR FROM date) AS "year", 
+	t.amount
+FROM card_holder
+INNER JOIN credit_card ON card_holder.card_holder_id = credit_card.card_holder_id
+INNER JOIN transaction as t ON credit_card.card = t.card
+WHERE 
+	card_holder.card_holder_id = 25 AND
+	EXTRACT(YEAR FROM date) = 2018 AND
+	EXTRACT(MONTH FROM date) >= 1 AND
+	EXTRACT(MONTH FROM date) <= 6
+ORDER BY t.date
 
 
 

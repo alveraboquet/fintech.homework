@@ -5,10 +5,11 @@
 * [schema.sql](./schema.sql): DB Schema
 * [queries.sql](./queries.sql): SQL Queries for Part 1 - Data Analysis
 
+<br>
 
-## Data Analysis
+## Data Analysis - Part 1:
 
-### Part 1:
+<br>
 
 * <strong>Question:</strong> Is there any evidence to suggest that a credit card has been hacked?
 * <strong>Answer:</strong>
@@ -91,3 +92,31 @@
     ```
 
     ![Top 5 merchants](Images/top_5_merchants.png)
+
+<br>
+
+## Data Analysis - Part 2:
+
+<br>
+
+* <strong>Question:</strong>What difference do you observe between the consumption patterns? Does the difference suggest a fraudulent transaction?
+* <strong>Answer:</strong>
+
+    * As we can see from the chart below...
+
+        ![Cardholders](Images/cardholders_2_18.png)
+
+<br>
+
+* <strong>Question:</strong>Are there any outliers for cardholder ID 25? How many outliers are there per month?
+* <strong>Answer:</strong>
+
+    * As we can see from the chart below...
+
+        ![Cardholders](Images/cardholder_25.png)
+
+
+<br>
+
+* <strong>Question:</strong>Do you notice any anomalies? Describe your observations and conclusions.
+* <strong>Answer:</strong>
