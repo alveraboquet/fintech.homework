@@ -3,7 +3,8 @@
 ## Supporting Files
 * [ERD.png](./ERD.png): ERD - Physical Model Design
 * [schema.sql](./schema.sql): DB Schema
-* [queries.sql](./queries.sql): SQL Queries for Part 1 - Data Analysis
+* [queries.sql](./queries.sql): SQL Queries for Part 1
+* [visual_data_analysis.ipynb](./visual_data_analysis.ipynb): Jupyter Notebook for Part 2
 
 <br>
 
