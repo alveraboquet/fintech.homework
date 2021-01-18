@@ -8,6 +8,12 @@
 
 <br>
 
+## ERD
+
+![Top 5 merchants](ERD.png)
+
+<br>
+
 ## Data Analysis - Part 1:
 
 <br>
