@@ -49,7 +49,9 @@
     LIMIT 100
     ```
 
-    * To be honest, I don't follow the logic here. First we are saying fraudulant tranactions are likely to be under $2, now we are looking for "top highest"? This question does not make sense to me.
+    * To be honest, I don't follow the logic here. First we are saying fraudulant tranactions are likely to be under $2, now we are looking for "top highest"? This question does not make sense to me. Regardless, above query returns top 100 high value transactions between 7-9am.
+
+    * Note: this solution is actually problematic...while the transaction has a timestamp, it is likely UTC. For a valid analysis, we would also need cardholder's timezone in order to correctly filter transacdtion records within 7-9am time range.
 
 
 <br>
@@ -109,7 +111,7 @@
 * <strong>Question:</strong>What difference do you observe between the consumption patterns? Does the difference suggest a fraudulent transaction?
 * <strong>Answer:</strong>
 
-    * As we can see from the chart below...
+    * As we can see from the chart below, the consumption pattern for cardholder 18 deviates from typical patterns. High value purchases occur on recurring intervals and indicate suspicious activity.
 
         ![Cardholders](Images/cardholders_2_18.png)
 
