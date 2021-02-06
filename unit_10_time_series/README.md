@@ -7,17 +7,17 @@ The financial departments of large companies often deal with foreign currency tr
 
 - - -
 
-## Files
-
-[Time-Series Analysis](./time_series_analysis.ipynb)
-
-[Linear Regression Analysis](./regression_analysis.ipynb)
+## Data
 
 [Yen Data](data/yen.csv)
 
 - - -
 
 ## Time-Series Forecasting
+
+<br>
+
+[Time-Series Analysis Notebook](./time_series_analysis.ipynb)
 
 <br>
 
@@ -35,9 +35,11 @@ TODO
 * <strong>Answer:</strong>
 TODO
 
-<br>
+- - -
 
 ## Linear Regression Forecasting
+
+[Linear Regression Analysis Notebook](./regression_analysis.ipynb)
 
 <br>
 
