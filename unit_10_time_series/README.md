@@ -19,8 +19,6 @@ The financial departments of large companies often deal with foreign currency tr
 
 [Time-Series Analysis Notebook](./time_series_analysis.ipynb)
 
-<br>
-
 ### Concepts
 
 * Auto-Regressive (AR) Models 
@@ -39,7 +37,6 @@ The financial departments of large companies often deal with foreign currency tr
 * Use AIC and BIC for goodness of fit (lower the better)
     * Akaike information criterion
     * Bayesian information criterion
-* 
 
 <br>
 
@@ -48,10 +45,12 @@ The financial departments of large companies often deal with foreign currency tr
 * <strong>Question:</strong> Based on your time series analysis, would you buy the yen now?
 * <strong>Answer:</strong> I would not buy the Japanese Yen at this time
 
+<br>
 
 * <strong>Question:</strong> Is the risk of the yen expected to increase or decrease?
 * <strong>Answer:</strong> Volatility and thus risk is increasing in the near short-term
 
+<br>
 
 * <strong>Question:</strong> Based on the model evaluation, would you feel confident in using these models for trading?
 * <strong>Answer:</strong> Volatility and thus risk is increasing in the near short-term
@@ -66,6 +65,5 @@ The financial departments of large companies often deal with foreign currency tr
 <br>
 
 * <strong>Question:</strong> Does this model perform better or worse on out-of-sample data compared to in-sample data?
-* <strong>Answer:</strong>
-TODO
+* <strong>Answer:</strong>This particular model performs better on out-of-sample data as compared to training data.
 
