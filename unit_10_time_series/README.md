@@ -15,8 +15,6 @@ The financial departments of large companies often deal with foreign currency tr
 
 ## Time-Series Forecasting
 
-<br>
-
 [Time-Series Analysis Notebook](./time_series_analysis.ipynb)
 
 ### Concepts
@@ -62,7 +60,7 @@ The financial departments of large companies often deal with foreign currency tr
 
 [Linear Regression Analysis Notebook](./regression_analysis.ipynb)
 
-<br>
+### Questions and Answers
 
 * <strong>Question:</strong> Does this model perform better or worse on out-of-sample data compared to in-sample data?
 * <strong>Answer:</strong>This particular model performs better on out-of-sample data as compared to training data.
