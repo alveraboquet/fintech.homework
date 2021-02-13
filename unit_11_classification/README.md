@@ -12,6 +12,11 @@ In this assignment, you will build and evaluate several machine-learning models 
 
 <br>
 
+### Files
+[Resampling Analysis Notebook](credit_risk_resampling.ipynb)
+
+<br>
+
 ### Notes
 * Models are biased toward the majority class. Thus, evaluation metrics, such as accuracty, can be misleading.
 * Strategies to deal with imbalanced classes:
@@ -36,26 +41,61 @@ In this assignment, you will build and evaluate several machine-learning models 
 
 | Strategy              | Bal Acc Score | Avg Pre   | Avg Rec   | Geo Mean  |
 | --------------------- | ------------- | --------- | --------- | --------- |
-| Random oversample     | 0.6579        | 0.99      | 0.61      | 0.66      |
-| SMOTE                 | 0.6619        | 0.99      | 0.69      | 0.66      |
-| Cluster centroids     | 0.5443        | 0.99      | 0.42      | 0.53      |
-| SMOTEEN               | 0.6435        | 0.99      | 0.58      | 0.64      |
+| Random oversample     | 0.8325        | 0.99      | 0.84      | 0.83      |
+| SMOTE                 | 0.8388        | 0.99      | 0.87      | 0.84      |
+| Cluster centroids     | 0.8215        | 0.99      | 0.76      | 0.82      |
+| SMOTEEN               | 0.8388        | 0.99      | 0.86      | 0.84      |
 
 <br>
 
 ### Questions and Answers
 
 * <strong>Question:</strong> Which model had the best balanced accuracy score?
-* <strong>Answer:</strong> SMOTE had the best balanced accuracy score by slim margin.
+* <strong>Answer:</strong> SMOTE and SMOTEEN have top balanced accuracy score, only slightly higher than random oversampling. Cluster centroids not far behind.
 
 <br>
 
 * <strong>Question:</strong> Which model had the best recall score?
-* <strong>Answer:</strong> SMOTE also had the best avg recall score.
+* <strong>Answer:</strong> SMOTE had the best avg recall score.
 
 <br>
 
 * <strong>Question:</strong> Which model had the best geometric mean score?
-* <strong>Answer:</strong> SMOTE tied random oversampling for best geometric mean score.
+* <strong>Answer:</strong> SMOTE and SMOTEEN tie for best geometric mean score.
+
+<br>
+
+## Ensemble Learning
+
+<br>
+
+### Files
+[Ensemble Learning Analysis Notebook](credit_risk_ensemble.ipynb)
+
+<br>
+
+### Notes
+
+<br>
+
+### Questions and Answers
+
+* <strong>Question:</strong> Which model had the best balanced accuracy score?
+* <strong>Answer:</strong> 
+
+<br>
+
+* <strong>Question:</strong> Which model had the best recall score?
+* <strong>Answer:</strong> 
+
+<br>
+
+* <strong>Question:</strong> Which model had the best geometric mean score?
+* <strong>Answer:</strong> 
+
+<br>
+
+* <strong>Question:</strong> What are the top three features?
+* <strong>Answer:</strong> 
 
 <br>
