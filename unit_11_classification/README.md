@@ -74,28 +74,37 @@ In this assignment, you will build and evaluate several machine-learning models 
 
 <br>
 
-### Notes
+### Results
+
+<br>
+
+| Strategy              | Bal Acc Score | Avg Pre   | Avg Rec   | Geo Mean  |
+| --------------------- | ------------- | --------- | --------- | --------- |
+| BRF                   | 0.7830        | 0.99      | 0.90      | 0.77      |
+| Easy Ensemble         | 0.9332        | 0.99      | 0.95      | 0.93      |
+
 
 <br>
 
 ### Questions and Answers
 
 * <strong>Question:</strong> Which model had the best balanced accuracy score?
-* <strong>Answer:</strong> 
+* <strong>Answer:</strong> The Easy Ensemble classifier provided the best balanced accuracy score.
 
 <br>
 
 * <strong>Question:</strong> Which model had the best recall score?
-* <strong>Answer:</strong> 
+* <strong>Answer:</strong> The Easy Ensemble classifier also had better recall score.
 
 <br>
 
 * <strong>Question:</strong> Which model had the best geometric mean score?
-* <strong>Answer:</strong> 
+* <strong>Answer:</strong> The Easy Ensemble classifier has highest geo mean.
 
 <br>
 
 * <strong>Question:</strong> What are the top three features?
-* <strong>Answer:</strong> 
-
-<br>
+* <strong>Answer:</strong> Surprisingly, the top features were:
+    * total_rec_prncp: 0.0653
+    * total_pymnt: 0.0637
+    * total_rec_int: 0.0617
