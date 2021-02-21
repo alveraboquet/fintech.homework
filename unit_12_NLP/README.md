@@ -1,6 +1,5 @@
 # Unit 12—Tales from the Crypto
 
-![Stock Sentiment](Images/sentimental.jpeg)
 
 ## Background
 
@@ -8,83 +7,48 @@ There's been a lot of hype in the news lately about cryptocurrency, so you want 
 
 In this assignment, you will apply natural language processing to understand the sentiment in the latest news articles featuring Bitcoin and Ethereum. You will also apply fundamental NLP techniques to better understand the other factors involved with the coin prices such as common words and phrases and organizations and entities mentioned in the articles.
 
-Complete the following tasks:
-
-1. [Sentiment Analysis](#Sentiment-Analysis)
-2. [Natural Language Processing](#Natural-Language-Processing)
-3. [Named Entity Recognition](#Named-Entity-Recognition)
 
 ---
 
-### Files
+## Files
 
-[Starter Notebook](Starter_Code/crypto_sentiment.ipynb)
-
----
-
-### Instructions
-
-#### Sentiment Analysis
-
-Use the [newsapi](https://newsapi.org/) to pull the latest news articles for Bitcoin and Ethereum and create a DataFrame of sentiment scores for each coin.
-
-Use descriptive statistics to answer the following questions:
-
-> Which coin had the highest mean positive score?
->
-> Which coin had the highest negative score?
->
-> Which coin had the highest positive score?
-
-#### Natural Language Processing
-
-In this section, you will use NLTK and Python to tokenize the text for each coin. Be sure to:
-
-1. Lowercase each word
-2. Remove punctuation
-3. Remove stop words
-
-Next, look at the ngrams and word frequency for each coin.
-
-1. Use NLTK to produce the ngrams for N = 2.
-2. List the top 10 words for each coin.
-
-Finally, generate word clouds for each coin to summarize the news for each coin.
-
-![btc-word-cloud.png](Images/btc-word-cloud.png)
-
-![eth-word-cloud.png](Images/eth-word-cloud.png)
-
-#### Named Entity Recognition
-
-In this section, you will build a named entity recognition model for both coins and visualize the tags using SpaCy.
-
-![btc-ner.png](Images/btc-ner.png)
-
-![eth-ner.png](Images/eth-ner.png)
+[Crypto Sentiment Analysis](crypto_sentiment.ipynb)
 
 ---
 
-### Resources
+## Sentiment Analysis
 
-[Vader Sentiment Analysis](http://www.nltk.org/howto/sentiment.html)
+<br>
+
+| Metric                | BTC       | ETH       |
+| --------------------- | --------  | --------- |
+| Mean positive         | 0.061     | 0.072     | 
+| Highest negative      | 0.227     | 0.175     | 
+| Highest positive      | 0.353     | 0.333     | 
+
+### Questions and Answers
+
+* <strong>Question:</strong> Which coin had the highest mean positive score?
+* <strong>Answer:</strong> Ethereum had a slightly higher mean positive score.
+
+<br>
+
+* <strong>Question:</strong> Which coin had the highest negative score?
+* <strong>Answer:</strong> Bitcoin had the highest negative score.
+
+<br>
+
+* <strong>Question:</strong> Which coin had the highest positive score?
+* <strong>Answer:</strong> Bitcoin had the higher positive score but the coins were essentially tied.
+
+<br>
+
+
+## Natural Language Processing
+
+
+![btc-ner.png](images/btc_wordcloud.png)
+
+![eth-ner.png](images/eth_wordcloud.png)
 
 ---
-
-### Hints and Considerations
-
-The free developer version of the News API limits the total monthly requests, so be careful not to exceed the free limits.
-
----
-
-### Submission
-
-* Create Jupyter Notebooks for the NLP analysis and host the notebooks on GitHub.
-
-* Include a Markdown that summarizes your homework and include this report in your GitHub repo.
-
-* Submit the link to your GitHub project to Bootcamp Spot.
-
----
-
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
