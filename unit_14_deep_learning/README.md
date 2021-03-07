@@ -44,7 +44,7 @@ In this assignment, you will use deep learning recurrent neural networks to mode
 
 <br>
 
-![results](Images/results.png)
+![results.png](images/results.png)
 
 * <strong>Question:</strong> Which model has a lower loss?
 * <strong>Answer:</strong> The model based on closing price had a consistently lower loss accross all parameter combinations tested.
