@@ -14,7 +14,7 @@
 
 <br>
 
-The objective of this project is to build a cryptocurrency notification agent that will continuously monitor OHLCV data and trigger alerts when common market indicators exceed configurable thresholds. When an alert is triggered, a LSTM RNN model will be employed to predict future price action. Additionally, NLP will be leveraged to perform sentiment analysis on related news articles. Resultant data will be summarized and then emailed or text messaged to subscribed recipients.
+The objective of this project is to build a cryptocurrency notification agent that will continuously monitor OHLCV data and trigger alerts when common market indicators exceed configurable thresholds. When an alert is triggered, various ML models (LSTM RNN, Linear Regression, and GARCH) will be employed to predict future price action . Additionally, NLP will be leveraged to perform sentiment analysis on recent news articles. Resultant data will be summarized and then emailed or text messaged to subscribed recipients.
 
 <br>
 
@@ -36,7 +36,7 @@ The objective of this project is to build a cryptocurrency notification agent th
 
 ## Machine Learning Models
 
-* LSTM RNN (highest priority)
+* LSTM RNN
 * Linear Regression
 * GARCH (???)
 * nltk.sentiment.vader SentimentIntensityAnalyzer
@@ -90,6 +90,7 @@ The objective of this project is to build a cryptocurrency notification agent th
             * triggers
         * openTrades
         * completedTrades
+* REST API to encapsulate data calls and updates to DynamoDB
 * web dashboard
 
 
