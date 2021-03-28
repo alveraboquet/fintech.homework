@@ -1,8 +1,11 @@
 # Crypto Adviser: Agent to the Moon
 
-## Team Members
-
+### Team Members 
 * Brian Hampson
+
+
+
+
 
 <br>
 
@@ -10,7 +13,7 @@
 
 <br>
 
-## Project Description
+# Project Description and Objectives
 
 <br>
 
@@ -22,11 +25,36 @@ The objective of this project is to build a cryptocurrency notification agent th
 
 <br>
 
-## Data Sources
+
+# Files
+
+<br>
+
+### Presentation
+* [Class Presentation PDF](crypto_advistor_presentation.pdf)
+
+### Google Colab
+* [Crypto OHLCV Data Prep](colab_crypto_ohlcv.ipynb)
+* [Price Prediction Models](colab_price_prediction_models.ipynb)
+* [Crypto Sentiment Analysis Data Prep](colab_sentiment_analysis.ipynb)
+* Notes: will not run outside of Google Colab, dependency on .env file and mounted drive
+
+### AWS Lambda
+* [Crypto Advisor Agent - Lambda Function](lambda_function.py)
+* Dependencies: 
+    * environment variables
+    * S3 bucket config
+    * lambda execution role with specific privaledges
+    * laybda layer with packages for CCXT, Numpy, Pandas
 
 
-* Crypto OHLCV - CCXT - Kraken
-* News headlines - newsapi
+### AWS Lambda Dependencies
+* [Package Dependencies - Lambda Layer](python.zip)
+
+
+### Test Data
+* [BTC OHLCV Local Cache](data/btc_ohlcv_cache.csv)
+* [Email HTML Template](email_template.html)
 
 <br>
 
@@ -34,13 +62,22 @@ The objective of this project is to build a cryptocurrency notification agent th
 
 <br>
 
-## Machine Learning Models
+# AWS Serverless Architecture
 
-* LSTM RNN
-* Linear Regression
-* GARCH (???)
-* nltk.sentiment.vader SentimentIntensityAnalyzer
-* word cloud (time permitting)
+<br>
+
+![AWS Serverless Architecture](images/aws_architecture.png)
+
+<br>
+
+- - -
+
+
+# Data Sources
+
+
+* Crypto OHLCV - CCXT SDK - Kraken Exchange
+* News headlines - News API
 
 <br>
 
@@ -48,7 +85,38 @@ The objective of this project is to build a cryptocurrency notification agent th
 
 <br>
 
-## Task Breakdown
+# Machine Learning Models
+
+* LSTM RNN (completed)
+* Linear Regression (completed)
+* GARCH (planned)
+* nltk.sentiment.vader SentimentIntensityAnalyzer (completed)
+* word cloud (planned)
+
+<br>
+
+- - -
+
+<br>
+
+# Notification Triggers - Technical Indicators
+
+* Exponentially Weighted Moving Average (EWMA) (completed)
+* Bollinger Bands (completed)
+* Relative Strength Index (RSI) (planned)
+* Fibonacci Retracements (planned)
+* Moving Average Convergence and Divergence (MACD) (planned)
+* Average Directional Index (planned)
+* On-Balance Volume (OBV) (planned)
+
+
+<br>
+
+- - -
+
+<br>
+
+# Task Breakdown
 
 * setup git repo
 * initial project planning, readme
@@ -77,12 +145,19 @@ The objective of this project is to build a cryptocurrency notification agent th
     * run ML models, make predictions
     * plots and graphs (save to S3, access from email)
     * summarize results
-    * send email or text
+    * send email
+    * build email html template
 * Configure S3 storage 
+* Configure AWS SES
+    * Register AWS domain on Route53
 * build presentation
 * finalize readme
 
+<br>
+
 ## Next steps
+* build package dependency layer for Keras and Tensor flow
+* load models in lambda
 * persistant storage - DynamoDB
     * tables
         * agent
@@ -96,6 +171,19 @@ The objective of this project is to build a cryptocurrency notification agent th
 
 
 
+<br>
+
+- - -
+
+<br>
+
+# Summary
+* AWS serverless architecture for the WIN!
+* Achieved end-to-end solution that is both extensible and scalable (and secure)
+* Platform for future development.
+* Pain points / lessons learned:
+* Difficulties importing Keras and TensorFlow.
+* Use Docker containers for build dependencies.
 
 
 
