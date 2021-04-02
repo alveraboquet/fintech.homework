@@ -1,0 +1,98 @@
+
+Create accounts
+
+./geth.exe account new --datadir node1
+./geth.exe account new --datadir node2
+
+Note: no password
+
+Record Details
+
+node1
+0xA202A17ffE4a578E4C97e717B6c96A3613C07Bdf
+running RPC on port 30303
+
+
+node2
+0x1f4B59fD17be47712a43DF371d26183faf2E8C92
+port 30304
+
+
+
+Generate genisis block
+
+./puppeth.exe
+
+name: zbank_testnet
+id: 888
+consensus: Clique (Proof of Authority)
+pw: none
+blocktime
+ports:
+pre-funded accounts:
+0xA202A17ffE4a578E4C97e717B6c96A3613C07Bdf
+0x1f4B59fD17be47712a43DF371d26183faf2E8C92
+
+Initialize nodes with genesis config
+
+./geth.exe init zbank_testnet.json --datadir node1
+./geth.exe init zbank_testnet.json --datadir node2
+
+
+
+
+
+Run node 1
+./geth.exe --datadir node1 --unlock "0xA202A17ffE4a578E4C97e717B6c96A3613C07Bdf" --mine --rpc --allow-insecure-unlock
+
+
+Record enode
+self=enode://5227a0308f3cf4cec113e7c21529995298db0d5fc867c41cb63c8344bcf5de7dd64f2e8f5dca26684f441a9c50c4735ada368af5ccb3cd784761097f1041ce70@127.0.0.1:30303
+
+Run node 2
+./geth.exe --datadir node2 --unlock "0x1f4B59fD17be47712a43DF371d26183faf2E8C92" --mine --port 30304 --bootnodes "enode://5227a0308f3cf4cec113e7c21529995298db0d5fc867c41cb63c8344bcf5de7dd64f2e8f5dca26684f441a9c50c4735ada368af5ccb3cd784761097f1041ce70@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+
+
+
+
+Send transaction from node1 to node2
+
+transaction hash: 0x8b345692cdbe8afeb86d6d9eaaf3a6acf2ea43bd131bacc1cfa0f5798cd1657e
+
+
+
+
+
+
+
+
+
+
+Genesis block config
+
+
+Node 1
+
+
+Node 2
+
+
+Steps to run
+
+
+
+Installation Notes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
