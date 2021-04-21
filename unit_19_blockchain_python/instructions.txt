@@ -1,0 +1,30 @@
+***********************************************
+Installation Instructions
+***********************************************
+
+1) Install PIP dependencies
+
+	1.1) pip install web3
+
+	1.2) pip install web3
+
+
+2) Install hd-wallet-derive
+
+	2.1) Create project directory called 'wallet' and cd into it (using git bash in admin mode)
+
+	2.2) git clone https://github.com/dan-da/hd-wallet-derive
+
+	2.3) cd hd-wallet-derive
+
+	2.4) curl https://getcomposer.org/installer -o installer.php
+
+	2.5) php installer.php
+
+	2.6) php composer.phar install
+
+	2.7) Create a symlink called derive for the hd-wallet-derive/hd-wallet-derive.php script into the top level project
+	directory like so: ln -s hd-wallet-derive/hd-wallet-derive.php derive 
+
+
+
